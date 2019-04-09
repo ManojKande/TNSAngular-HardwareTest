@@ -36,6 +36,16 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
         <GridLayout
           columns="auto, *"
           class="sidedrawer-list-item"
+          [class.selected]="isComponentSelected('/location')"
+          (tap)="onNavItemTap('/location')"
+        >
+          <Label col="0" text="&#xf083;" class="fa"></Label>
+          <Label col="1" text="Location" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="sidedrawer-list-item"
           [class.selected]="isComponentSelected('/browse')"
           (tap)="onNavItemTap('/browse')"
         >
